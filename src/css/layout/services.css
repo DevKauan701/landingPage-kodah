@@ -1,0 +1,318 @@
+
+/* ========================================
+   SERVICES — KODAH
+======================================== */
+
+.services {
+  width: 100%;
+  background-color: #ffffff;
+  color: #101f30;
+}
+
+/* Container principal */
+
+.services_container {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 120px 7.8% 120px;
+  box-sizing: border-box;
+}
+
+/* Cabeçalho */
+
+.services_header {
+  margin-bottom: 60px;
+}
+
+/* Identificação da seção */
+
+.services_eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  margin-bottom: 28px;
+
+  color: #101f30;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.services_eyebrow-line {
+  display: block;
+  flex-shrink: 0;
+
+  width: 28px;
+  height: 2px;
+
+  background-color: #fbb316;
+}
+
+/* Título principal */
+
+.services_title {
+  max-width: 800px;
+  margin: 0;
+
+  color: #101f30;
+  font-size: clamp(42px, 4vw, 62px);
+  font-weight: 400;
+  line-height: 1.04;
+  letter-spacing: -0.065em;
+}
+
+/* Grid dos serviços */
+
+.services_grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  width: 100%;
+  border-top: 1px solid #d9d6cf;
+}
+
+/* Card individual */
+
+.services_card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  min-width: 0;
+  min-height: 310px;
+  padding: 40px 40px 25px 0;
+}
+
+.services_card + .services_card {
+  padding-left: 40px;
+  border-left: 1px solid #d9d6cf;
+}
+
+/* Numeração */
+
+.services_number {
+  color: #e6a000;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* Conteúdo do card */
+
+.services_card-content {
+  margin-top: 62px;
+  padding-right: 8px;
+}
+
+/* Título do serviço */
+
+.services_card-title {
+  margin: 0;
+
+  color: #101f30;
+  font-size: clamp(23px, 2vw, 29px);
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.035em;
+}
+
+/* Descrição */
+
+.services_card-description {
+  max-width: 340px;
+  margin: 18px 0 0;
+
+  color: #60758d;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.8;
+}
+
+/* Botão com seta */
+
+.services_card-link {
+  position: absolute;
+  right: 30px;
+  bottom: 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 39px;
+  height: 39px;
+
+  border: 1px solid #d9d6cf;
+  background-color: transparent;
+
+  color: #101f30;
+  text-decoration: none;
+
+  transition:
+    color 0.25s ease,
+    background-color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.services_card-link i {
+  font-size: 13px;
+  transition: transform 0.25s ease;
+}
+
+.services_card-link:hover {
+  color: #ffffff;
+  background-color: #101f30;
+  border-color: #101f30;
+}
+
+.services_card-link:hover i {
+  transform: translate(2px, -2px);
+}
+
+.services_card-link:focus-visible {
+  outline: 2px solid #101f30;
+  outline-offset: 4px;
+}
+
+/* ========================================
+   TABLETS
+======================================== */
+
+@media (max-width: 1024px) {
+  .services_container {
+    padding: 95px 5% 100px;
+  }
+
+  .services_header {
+    margin-bottom: 48px;
+  }
+
+  .services_title {
+    font-size: clamp(40px, 5vw, 54px);
+  }
+
+  .services_card {
+    min-height: 300px;
+    padding-right: 24px;
+  }
+
+  .services_card + .services_card {
+    padding-left: 24px;
+  }
+
+  .services_card-content {
+    margin-top: 52px;
+  }
+
+  .services_card-title {
+    font-size: 24px;
+  }
+
+  .services_card-description {
+    font-size: 13px;
+  }
+
+  .services_card-link {
+    right: 20px;
+  }
+}
+
+/* ========================================
+   CELULARES
+======================================== */
+
+@media (max-width: 640px) {
+  .services_container {
+    padding: 76px 24px 82px;
+  }
+
+  .services_header {
+    margin-bottom: 38px;
+  }
+
+  .services_eyebrow {
+    gap: 9px;
+    margin-bottom: 22px;
+
+    font-size: 9px;
+    letter-spacing: 1.7px;
+  }
+
+  .services_eyebrow-line {
+    width: 24px;
+  }
+
+  .services_title {
+    font-size: clamp(36px, 9vw, 48px);
+    line-height: 1.08;
+    letter-spacing: -0.06em;
+  }
+
+  .services_desktop-break {
+    display: none;
+  }
+
+  .services_grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services_card {
+    min-height: 245px;
+    padding: 28px 52px 30px 0;
+  }
+
+  .services_card + .services_card {
+    padding-left: 0;
+    border-left: none;
+    border-top: 1px solid #d9d6cf;
+  }
+
+  .services_card-content {
+    margin-top: 36px;
+  }
+
+  .services_card-title {
+    font-size: 25px;
+  }
+
+  .services_card-description {
+    max-width: 360px;
+    margin-top: 12px;
+    font-size: 14px;
+  }
+
+  .services_card-link {
+    right: 0;
+    bottom: 28px;
+
+    width: 36px;
+    height: 36px;
+  }
+}
+
+/* Telas muito estreitas */
+
+@media (max-width: 380px) {
+  .services_container {
+    padding-right: 18px;
+    padding-left: 18px;
+  }
+
+  .services_title {
+    font-size: 35px;
+  }
+}
+
+/* Movimento reduzido */
+
+@media (prefers-reduced-motion: reduce) {
+  .services_card-link,
+  .services_card-link i {
+    transition: none;
+  }
+}
